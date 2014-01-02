@@ -1,0 +1,45 @@
+Options +FollowSymlinks -MultiViews
+RewriteEngine on
+
+# Garantir que podemos chamar sem o /index.php
+DirectoryIndex index.php
+
+# to make `/path/index.php` to /path/
+RewriteCond %{THE_REQUEST} ^GET\s(.*/)index\.php [NC]
+RewriteRule . %1 [NE,R=301,L]
+
+RewriteCond %{THE_REQUEST} ^GET\s.+\.php [NC]
+RewriteRule ^(.+)\.php$ /$1 [NE,R=301,L,NC]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^(.*?)/?$ $1.php [L]
+# fim
+
+# Para passar com "/"
+#RewriteRule ^entidade/(.*)$ entidade.php?id=$1
+#RewriteRule ^entidade/(.*)/(.*)$ entidade.php?id=$1&pg=$2
+#RewriteRule ^entidade/([A-Za-z0-9-]+)$ entidade.php?id=$1
+#RewriteRule ^entidade/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)$ entidade.php?id=$1&dpg=$2&ppg=$3
+RewriteRule ^entidade/([A-Za-z0-9-]+)/?(.*)$ entidade.php?id=$1
+
+RewriteRule ^entidade_tab_p/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)$ entidade_tab_p.php?id=$1&dpg=$2&ppg=$3
+RewriteRule ^entidade_tab_d/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)$ entidade_tab_d.php?id=$1&dpg=$2&ppg=$3
+
+RewriteRule ^doadores/(.*)$ doadores.php?pg=$1
+RewriteRule ^contratadas/(.*)$ contratadas.php?pg=$1
+RewriteRule ^ranking/(.*)$ ranking.php?pg=$1
+
+RewriteRule ^buscar_auto/(.*)$ buscar_auto.php?param=$1
+RewriteRule ^buscar_tab_pj/([A-Za-z0-9-\ ]+)/([A-Za-z0-9-]+)$ buscar_tab_pj.php?parametro=$1&pg=$2
+RewriteRule ^buscar_tab_candidato/([A-Za-z0-9-\ ]+)/([A-Za-z0-9-]+)$ buscar_tab_candidato.php?parametro=$1&pg=$2
+
+RewriteRule ^candidato/([A-Za-z0-9-]+)/?(.*)$ ccp.php?tipo_ccp=candidato&id=$1
+RewriteRule ^comite/([A-Za-z0-9-]+)/?(.*)$ ccp.php?tipo_ccp=comite&id=$1
+RewriteRule ^partido/([A-Za-z0-9-]+)/?(.*)$ ccp.php?tipo_ccp=partido&id=$1
+
+
+RewriteRule ^ccp_tab/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)$ ccp_tab.php?tipo_ccp=$1&tipo_receita=$2&id=$3&pg=$4
+
+RewriteRule ^404$ 404.php
+ErrorDocument 404 /404

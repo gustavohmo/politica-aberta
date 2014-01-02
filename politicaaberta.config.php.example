@@ -1,0 +1,48 @@
+<?php
+########################################################################################################################
+# politicaaberta.config.php
+# Arquivo de configuracao. Altere as constantes abaixo de acordo com o seu sistema.
+########################################################################################################################
+
+# 1. Timezone
+define('PA_TIMEZONE','America/Sao_Paulo');
+setlocale(LC_CTYPE,'en_US.utf8');
+
+# 2. Diretorios do Smarty. Há duas opções para cada constante relacionada à configuração do Smarty porque meus ambientes
+# de desenvolvimento e produção são diferentes. Se você usa apenas Linux, basta preencher as constantes referentes
+# ao Linux abaixo e deixar as demais em branco. Se você usa outra coisa, basta preencher a parte dos 'outros' mais abaixo.
+
+# Diretorios do Smarty (se você usa Linux)
+## Smarty.class.php
+define('PA_SMARTY_LINUX','/usr/lib/php5/Smarty/Smarty.class.php');
+
+## Demais diretorios Smarty
+define('PA_SMARTY_TEMPLATES','/var/www/Smarty/templates');
+define('PA_SMARTY_COMPILE','/var/www/Smarty/templates_c');
+define('PA_SMARTY_CONFIG','/var/www/Smarty/configs');
+define('PA_SMARTY_CACHE','/var/www/Smarty/cache');
+
+# Diretorios do Smarty (se você usa outros sistemas)
+define('PA_SMARTY_OUTROS','Smarty.class.php');
+
+## Demais diretorios Smarty
+define('PA_SMARTY_TEMPLATES_OUTROS','c:\webroot\Smarty\templates');
+define('PA_SMARTY_COMPILE_OUTROS','c:\webroot\Smarty\templates_c');
+define('PA_SMARTY_CONFIG_OUTROS','c:\webroot\Smarty\configs');
+define('PA_SMARTY_CACHE_OUTROS','c:\webroot\Smarty\cache');
+
+# 3. MySQL
+define('PA_MYSQL_HOST','localhost');
+define('PA_MYSQL_DBNAME','NOME_DO_BANCO_DE_DADOS');
+define('PA_MYSQL_USER','NOME_DO_USUARIO');
+define('PA_MYSQL_PASSWORD','SENHA');
+
+define('PA_MYSQL_GASTOSDIRETOS','gastosdiretos_rel');
+
+# 4. Anos utilizados
+# Estes anos serão utilizados para as rotinas com os totais de doadores e de contratadas.
+# Por enquanto, o aplicativo apenas suporta um ano por tipo de dado. Tentamos parametrizar ao máximo este elemento,
+# mas para habilitar mais de um ano as queries SQL terão de ser revistas (em especial os objects de fetch, que
+# às vezes esperam apenas uma linha).
+$PA_DOADORES_ANOS = array('2012');
+$PA_CONTRATADAS_ANOS = array('2011');

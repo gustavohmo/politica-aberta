@@ -1,0 +1,10 @@
+# Ignorando arquivo de configuracao com senhas do banco.
+politicaaberta.config.php
+
+# Ignorando nosso blog
+blog.html
+blog.css
+master2-blog.css
+
+# Ignorando o google analytics
+ga.js

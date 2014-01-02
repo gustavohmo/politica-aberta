@@ -1,0 +1,417 @@
+/*-------------------------+
+ | Site: Chicago Lobbyists |
+ | Part: Master styles     |
+ +-------------------------*/
+
+/* Imports
+=====================================================================*/
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);
+@import "reset.css";
+@import "forms.css";
+
+
+/* Fonts
+=====================================================================*/
+body, input, select, textarea { font-family: "Droid Sans", Arial, sans-serif; }
+
+
+/* Basics
+=====================================================================*/
+a { color: #78787A; text-decoration: none; }
+a:hover { text-decoration: underline; }
+body { font-size: 14px; line-height: 1.4; }
+blockquote, dl, ol, p, pre, table, ul { margin-bottom: 1.4em; }
+dt { font-size: 15px; font-weight: bold; margin-top: 1em; }
+dt:first-child { margin-top: 0; }
+em { font-style: italic; }
+h1 { font-size: 30px; font-weight: normal; line-height: 1.14; margin-bottom: 0.5em; }
+h2, h3, h4, h5, h6, strong { font-weight: bold; }
+h1 span { font-size: 16px; }
+h2 { font-size: 19px; line-height: 1.26; }
+h3 { font-size: 17px; line-height: 1.17; margin-bottom: 0.5em; }
+h4 { font-size: 1.1em; }
+hr { background: #ddd; border: 0; clear: both; color: #ddd; height: 1px; margin: 1.5em 0; }
+input, select, text area { font-size: 1em; }
+ol { list-style: decimal; margin-left: 2em; }
+table { border-collapse: collapse; width: 100%; }
+table li, table ul { margin: 0; }
+td { border: 1px solid #ddd;
+    border-width: 1px 0;
+    /* Mudando depois de colocar os expand/collapse rows padding: 0.3em 1.5em 0.3em 0; */
+    padding: 0.3em 1.5em 0.3em 0;
+    vertical-align: top; }
+th { font-size: 12px; font-weight: bold; padding: 0.3em 1.5em 0.3em 0; }
+ul { list-style: disc; margin-left: 1.5em; }
+
+
+/* Layout
+=====================================================================*/
+.clear { clear: both; }
+.l { float: left; }
+.l img { padding-right: 10px; }
+.r { float: right; }
+.r img { padding-left: 10px; }
+#content, #nav-content { margin: 0 auto; width: 980px; }
+
+/* Primary content */
+.content-primary { float: left; width: 65%; }
+
+/* Secondary content */
+.content-secondary { float: right; margin-left: 3%; width: 31%; }
+
+blockquote {
+	margin: 1em 3em;
+	padding-left: 0.5em;
+	padding-right: 2em;}
+
+/* Bios */
+#bio { clear: both; margin-bottom: 30px; }
+/*#bio-primary { float: left; width: 74.2%; }*/
+#bio-primary { float: left; width: 100%; }
+#bio-secondary { float: right; position: relative; width: 22.7%; }
+
+#bio-secondary .map-overlay {
+  background:#fff6d3;
+  border:3px solid #FFE27E;
+  font-size:4em;
+  height:219px;
+  left:0;
+  opacity:.6;
+  position:absolute;
+  text-align:center;
+  top:0;
+  vertical-align:middle;
+  width:219px;
+}
+
+.map-overlay .text {
+  -webkit-transform: rotate(-45deg);	
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  margin: 40px 0 0 15px;
+  transform: rotate(-45deg);
+}
+
+
+/* Columns */
+.c2l, .c2r { width: 48%; }
+.c2l, .c3l, .c3m { float: left; }
+.c2r, .c3r { float: right; }
+.c2r ul { margin-top: 0 }
+.c3l { margin-right: 3%; }
+.c3l, .c3m, .c3r { width: 31%; }
+
+/* Header
+=====================================================================*/
+
+/* Header */
+#header { margin-bottom: 30px; }
+
+/* Logo */
+#logo { float: left; }
+
+/* Navigation */
+#nav { /*background: #e4f3fa;*//*background: #D0F5BA;*/ background: #E4F3FA; margin-bottom: 0px; padding: 0.75em 0; position: relative; z-index: 10; }
+#nav li { display: inline; margin-right: 1em; }
+#nav li.current { font-weight: bold; }
+#nav li.current a { color: #000; }
+#nav ul { list-style: none; margin: 0; float: left; }
+
+.hr-topo { margin-top: auto; visibility: hidden; }
+/* Search */
+#search { float: right; text-align: right; white-space: nowrap; }
+#search input { font-size: 13px; text-align: left; }
+#buscar { color: lightgray; }
+
+/* Stats */
+#stats {
+  list-style: none;
+  margin: 0;
+}
+
+#stats a:link, #stats a:visited {
+  /*color: #99b4c1;*/
+  color: #78787A;
+}
+#stats a:hover, #stats a:active {
+  /*color: #027BB6;*/
+  color: #000000;
+  text-decoration: none;
+}
+
+#stats li {
+  /*background: #e4f3fa;*/
+  background: #EEEEE2;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  /* Original: margin: 0 3% 30px 0;*/
+  margin: 0 13% 30px 0;
+  text-align: center;
+  /* Original: width: 14.1%;*/
+  width: 18%;
+  /* Adicionado: */
+  white-space: nowrap;
+}
+
+#stats li:last-child { float: right; margin: 0; }
+#stats li#paid { background-color: #FFF; /*width: 31.3%*/ margin: 0 0 0 21px; width: 33.3%;}
+#stats li#paid strong { color: /*#346983*/ #000000; }
+#stats li#paid p { text-align: center;}
+#stats .stat { display: block; padding: 15px 1.5%; }
+#stats strong { display: block; font-size: 38px; }
+#stats li.current { font-weight: bold; }
+#stats li.current a strong, #stats li.current a { color: #346983; }
+
+/* Footer
+=====================================================================*/
+
+#footer {
+  border-top: 1px solid #ddd;
+  clear: both;
+  color: #aaa;
+  font-size: 11px;
+  padding-top: 10px;
+}
+
+/* Content
+=====================================================================*/
+
+/* Bio */
+#bio-header p { margin: 0; }
+#bio-header img { margin-left: 15px; vertical-align: middle; }
+
+/* Sections */
+#bio .section { width: 346px; }
+#bio .section dt { color: #888; }
+#bio .section .total-paid,
+#bio .spotlight strong { font-size: 34px; }
+
+/* Dashboard */
+#dashboard h2 { color: #c00000; font-size: 14px; margin-bottom: 0.5em; text-transform: uppercase; }
+#dashboard h2 a { text-transform: none; padding-left: 1em; }
+
+/* DataTables */
+.datatable { clear: both; /* adicionando: */ width: 100%; table-layout: fixed; word-wrap:break-word; }
+.dataTables_filter { float: right; margin-bottom: 1em; }
+.dataTables_filter input { padding: 0.3em; width: 15em; }
+
+.table-head { float: left; margin-bottom: 1em; }
+
+.datatable.lobbyist-actions .purpose {
+  width: 15%;
+}
+.datatable.lobbyist-actions .agency {
+  /*width: 37.5%;*/
+}
+.datatable.lobbyist-actions .client {
+  /*width: 37.5%;*/
+    width: 80%;
+}
+.datatable.lobbyist-actions .actions {
+  width: 5%;
+}
+
+.datatable.firm-actions .purpose {
+  width: 15%;
+}
+.datatable.firm-actions .lobbyist {
+  width: 25%;
+}
+.datatable.firm-actions .agency {
+  width: 25%;
+}
+.datatable.firm-actions .client {
+  /*width: 25%;*/
+    width: 80%;
+}
+.datatable.firm-actions .actions {
+  width: 5%;
+}
+
+.datatable.agency-actions .purpose {
+  width: 15%;
+}
+.datatable.agency-actions .lobbyist {
+  width: 25%;
+}
+.datatable.agency-actions .agency {
+  width: 25%;
+}
+.datatable.agency-actions .client {
+  width: 25%;
+}
+.datatable.agency-actions .actions {
+  width: 5%;
+}
+
+.datatable.agency-actions .purpose {
+  width: 15%;
+}
+.datatable.agency-actions .lobbyist {
+  width: 25%;
+}
+.datatable.agency-actions .agency {
+  width: 25%;
+}
+.datatable.agency-actions .actions {
+  width: 5%;
+}
+
+th.sorting, th.sorting_asc, th.sorting_desc { cursor: pointer; }
+th.sorting_asc span { background: url(/imagens/sort-up.png) no-repeat 100% 50%; padding-right: 10px; }
+th.sorting_desc span { background: url(/imagens/sort-down.png) no-repeat 100% 50%; padding-right: 10px; }
+.nb { white-space: nowrap; }
+
+/* Charts on Homepage */
+.chartlist {
+  border-top: 1px solid #EEEEE2;
+  list-style: none;
+  margin-left: 0;
+}
+
+.chartlist a {
+  display: block;
+  padding: 0.4em 4.5em 0.4em 0.5em;
+  position: relative;
+  z-index: 2;
+}
+
+.chartlist .count { 
+  color: #999;
+  display: block;
+  font-weight: bold;
+  line-height: 2em;
+  margin: 0 0.3em;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+.chartlist .index { 
+  /*background: #b8e4f5;*/
+  background: #EEEEF2;
+  display: block;
+  height: 100%;
+  left: 0;
+  line-height: 2em;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  text-indent: -9999px;
+}
+
+.chartlist li {
+  border-bottom: 1px solid #EEEEEE;
+  position: relative;
+}
+
+.chartlist li:hover {
+  background: #EEEEE2;
+}
+
+/* Tables on Listing Pages */
+
+.listing h3 {
+  margin-bottom: 0;
+}
+
+.listing td {
+  padding: 0.5em 0;
+  vertical-align: middle;
+}
+
+.bar {
+  padding: 0.4em 0;
+  position: relative;
+  width: 50%;
+}
+
+.bar span { 
+  background: #b8e4f5;
+  border-left: 1px solid #b8e4f5;
+  border-radius: 3px;
+  display: block;
+  font-weight: bold;
+  height: 100%;
+  overflow: visible;
+}
+
+.bar span strong { display: block; font-weight: normal; padding: 0.3em 0.5em; }
+.listing .bar span strong { padding: 0.8em 0.5em; }
+
+#listing th span {
+  color: #027BB6;
+  cursor: pointer;
+}
+
+/* Map */
+#map_canvas { border: 1px solid #aaa; height: 222px; margin-bottom: 1em; }
+
+/* Muted text */
+.mute { color: #999; font-size: 13px; }
+
+/* Unordered lists */
+
+.section ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* Stats */
+.stats { font-size: 16px; list-style: none; margin-left: 0;; }
+.stats li { margin-bottom: 0.5em; }
+.stats p { font-size: 13px; margin: 0; }
+.stats strong { font-size: 28px; }
+
+/* Tabs */
+.ui-tabs-hide { display: none; }
+.tab-content { border: 1px solid #ccc; border-radius: 0 6px 6px 6px; clear: both; margin-bottom: 1.5em; padding: 25px; }
+
+	/* Nav */
+	.tab-nav { font-size: 16px; list-style: none; margin: 0; }
+	
+	.tab-nav a {
+		background: #ffffff;
+		background: -moz-linear-gradient(top, #ffffff 70%, #e5e5e5 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(70%,#ffffff), color-stop(100%,#e5e5e5));
+		background: -webkit-linear-gradient(top, #ffffff 70%,#e5e5e5 100%);
+		background: -o-linear-gradient(top, #ffffff 70%,#e5e5e5 100%);
+		background: -ms-linear-gradient(top, #ffffff 70%,#e5e5e5 100%);
+		background: linear-gradient(top, #ffffff 70%,#e5e5e5 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+		border: 1px solid #ccc;
+		border-radius: 6px 6px 0 0;
+		display: block;
+		margin-bottom: -1px;
+		padding: 0.5em 1.5em;
+	}
+	
+	.tab-nav a:hover { background: #E4F3FA; color: #346983; text-decoration: none; }
+	.tab-nav li { float: left; margin-right: 3px; }
+	
+	.ui-tabs-selected a, .ui-tabs-selected a:hover { background: #fff; border-bottom-color: #fff; color: #000; }
+
+
+#facebook-div {
+    float: right;
+    margin-right: 8px;
+}
+
+.twitter-follow-button {
+    float: right;
+}
+
+.ranking {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.ranking a {
+    color: #C00000;
+    font-size: 14px;
+}

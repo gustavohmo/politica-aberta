@@ -1,0 +1,64 @@
+/*-------------------+
+ | Part: Form styles |
+ +-------------------*/
+
+
+/* Buttons */
+input[type=button], input[type=submit] {
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #e4f3fa 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e4f3fa));
+  background: -webkit-linear-gradient(top, #ffffff 0%,#e4f3fa 100%);
+  background: -o-linear-gradient(top, #ffffff 0%,#e4f3fa 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%,#e4f3fa 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e4f3fa',GradientType=0 );
+  background: linear-gradient(top, #ffffff 0%,#e4f3fa 100%);
+  border: 1px solid #d2dee4;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #027bb6;
+  font-weight: bold;
+  padding: 0.5em 1em;
+}
+
+/* Hints */
+.ezpz-hint { color: #aaa; font-style: italic; }
+
+/* Notifications */
+div.alert, div.confirm, div.notice { color: #000; margin-bottom: 1em; padding: 0.5em 1em 0.5em 43px; }
+div.alert dl, div.confirm dl, div.notice dl, div.alert p, div.confirm p, div.notice p { margin: 0; }
+div.alert .mute, div.confirm .mute, div.notice .mute { font-size: 1em; }
+div.alert h6, div.confirm h6, div.notice h6 { font-size: 1em; }
+div.alert li, div.confirm li, div.notice li { background: none; padding: 0; }
+div.alert ul, div.confirm ul, div.notice ul { list-style: disc outside; margin-left: 2em; }
+
+  /* Alerts */
+  .alert { color: #e30013; }
+  div.alert { background: #ffd4d4 url(/images/notify-alert.gif) no-repeat 10px 0.5em; border: 3px solid #dd9898; }
+  
+  /* Confirmations */
+  div.confirm { background: #d8ffd4 url(/images/notify-confirm.gif) no-repeat 10px 0.6em; border: 3px solid #9edd98; }
+  
+  /* Notices */
+  div.notice { background: #fff6d3 url(/images/notify-notice.gif) no-repeat 10px 0.5em; border: 3px solid #ffe27e; }
+  div.notice span.loading { background: url(/images/loading-small.gif) no-repeat 95% 50%; padding-right: 2em; }
+
+/* Search */
+#search input { vertical-align: middle; }
+#search input[type=text] { padding: 0.6em; width: 20em; }
+
+/* Text boxes */
+input[type=text] {
+  border: 1px solid #ccc;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: inset 0 1px 1px #ddd;
+  -webkit-box-shadow: inset 0 1px 1px #ddd;
+  box-shadow: inset 0 1px 1px #ddd;
+  margin-right: 0.5em;
+  padding: 0.3em;
+  vertical-align: middle;
+  width: 95%;
+}

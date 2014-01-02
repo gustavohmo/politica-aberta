@@ -1,0 +1,31 @@
+#results {
+	border: 1px solid #CCCCCC;
+    border-radius: 4px;
+	border-bottom: 0px;
+	font-size: 12px;
+	font-family: arial;
+    text-align: left;
+    padding: 0px;
+	display: none;
+    position: absolute;
+}
+
+#results div {
+    border-bottom: 1px solid #BFBFBF;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+#results .selected {
+    background-color: #666;
+	color: #fff;
+}
+
+#results .unselected {
+    background-color: #fff;
+	color: #666;
+}
+
+#results .texto_resultado {
+    margin-left: 10px;
+}
