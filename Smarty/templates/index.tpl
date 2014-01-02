@@ -60,7 +60,7 @@
   <div class="content-secondary">
   </div>
   <h2>Sobre o Política Aberta</h2>
-    <p>O Política Aberta apresenta informações a respeito de influências externas sobre o governo, para que nossa democracia se torne mais transparente. Este projeto utiliza dados oficiais abertos pelo governo brasileiro e foi construído em <a href="git">código aberto</a>. <a href="/sobre">Saber mais »</a></p>
+    <p>O Política Aberta apresenta informações a respeito de influências externas sobre o governo, para que nossa democracia se torne mais transparente. Este projeto utiliza dados oficiais abertos pelo governo brasileiro e foi construído em <a href="https://github.com/gustavohmo/politica-aberta">código aberto</a>. <a href="/sobre">Saber mais »</a></p>
 
 <h2>Contato</h2>
     <p>Se você tem quaisquer comentários, sugestões, pedidos etc, favor nos contactar em <a href="mailto:politicaabertasite@gmail.com">politicaabertasite@gmail.com</a> ou no Facebook em <a href="https://www.facebook.com/PoliticaAbertaSite">Politica Aberta</a>.</p>

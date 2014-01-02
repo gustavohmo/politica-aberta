@@ -102,7 +102,7 @@
 
     <p>Para o layout/design do site, utilizamos o layout/design do <a href="http://www.chicagolobbyists.org/"">Chicago Lobbyists</a>, desenvolvido pelo pessoal do <a href="http://opencityapps.org/">Open City Apps</a> e liberado em código aberto.</p>
 
-    <p>Todo o código-fonte desenvolvido é aberto e está <a href="https://github.com/gustavohmo">disponível no github</a>.</p>
+    <p>Todo o código-fonte desenvolvido é aberto e está <a href="https://github.com/gustavohmo/politica-aberta">disponível no github</a>.</p>
     <hr />
 
     <h2 id="agradecimentos">Agradecimentos</h2>
